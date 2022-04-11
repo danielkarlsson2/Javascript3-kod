@@ -1,4 +1,4 @@
-import React from 'react'
+import { useState } from 'react'
 import CustomerRow from './CustomerRow'
 
 const CustomerList = ({ customers, removeCustomer }) => {
@@ -14,7 +14,21 @@ const CustomerList = ({ customers, removeCustomer }) => {
         </tr>
       </thead>
       <tbody>
-        <CustomerRow />
+        
+        {
+          customers && customers.map(customer => <CustomerRow removeCustomer={removeCustomer} key={customer.id} customer={customer} />)
+        }
+
+        {
+          !customers.length && (
+
+            <tr>
+              <td>No Customers to show</td>
+            </tr>
+          )
+        }
+
+
         
       </tbody>
     </table>

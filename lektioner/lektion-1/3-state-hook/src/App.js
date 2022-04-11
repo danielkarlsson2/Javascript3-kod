@@ -55,10 +55,10 @@ function App() {
 
       {/* <Post title="Post 1" body="this is a post"/> */}
 
-      {/* {  
+      {  
         posts.map(post => <Post title={post.title} body={post.body} key={post.id}/>)
           
-      } */}
+      }
 
       {/* {
         posts.map(post => {

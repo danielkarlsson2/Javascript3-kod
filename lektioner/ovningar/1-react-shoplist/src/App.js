@@ -1,23 +1,30 @@
-import logo from './logo.svg';
+import { useState } from 'react';
+import Header from './components/Header'
+import ShoppingForm from './components/ShoppingForm';
+import ShoppingList from './components/ShoppingList';
 import './App.css';
 
+
 function App() {
+
+  const [products, setProducts] = useState([
+    { id: 1, name: 'smör'},
+    { id: 2, name: 'mjölk'},
+  ])
+  
+  const addProduct = (product) => {
+    setProducts(oldProducts => {
+      return[...oldProducts, {id: Date.now().toString(), name: product }]
+    })
+
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="header">
+      <Header />
+      <div className='container mt-4 main border'>
+        <ShoppingForm addProduct={addProduct}/>
+        <ShoppingList products={products}/>
+      </div>
     </div>
   );
 }

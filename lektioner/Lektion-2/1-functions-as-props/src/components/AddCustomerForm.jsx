@@ -24,6 +24,7 @@ export const AddCustomerForm = ({ addCustomer }) => {
         <input type="text" className="form-control" ref={customerNameInput} value={customerName} onChange={e => setCustomerName(e.target.value)} placeholder="Enter customer name" />
         <button className="btn btn-primary">Add Customer</button>
       </div>
+      
     </form>
   )
 }
