@@ -21,11 +21,13 @@ body {
   text-align: center;
   border-bottom: 1px solid #e7e7e7;
   position: relative;
-  /* padding-bottom: 2rem; */
+  padding-bottom: 2rem;
+  /* display: flex; */
 }
 
 .Header h1 {
   margin-bottom: 1rem;
+  /* flex: 1; */
 
 }
 
@@ -40,10 +42,111 @@ body {
   bottom: 1rem;
   cursor: pointer;
 }
+.clear-btn:hover {
+  background-color: #632d2d;
+}
+.clear-btn:active {
+  background-color: #512222;
+}
 .Shopping-list {
   height: 75vh;
   overflow: auto;
 }
 .List-item {
-  
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #e7e7e7;
+  padding-block: .2rem;
+}
+
+.product-title {
+  cursor: pointer;
+  user-select: none;
+}
+.complete {
+  text-decoration: line-through;
+  color: #858585;
+}
+
+.btn {
+  border: 0;
+  background-color: transparent;
+  color: #858585;
+  cursor: pointer;
+  transition: color 200ms ease;
+}
+.change-btn:hover {
+  color: #3c9e98;
+}
+.delete-btn { margin-left: .5rem;}
+.delete-btn:hover {
+  color: #9f3232;
+}
+
+.Add-item {
+  display: flex;
+}
+
+.Add-item input {
+  width: 100%;
+  font-size: 1em;
+  padding: .3em .5em;
+  border: 1px solid #c5c5c5;
+  border-radius: 1rem 0 0 1rem;
+}
+.Add-item:focus {
+  outline: 1px solid #7f7f7f;
+}
+
+.Add-item button {
+  background-color: #666;
+  color: white;
+  border: 0;
+  padding: .5em .8em;
+  border-radius: 0 1rem 1rem 0;
+  cursor: pointer;
+  transition: all 150ms ease;
+}
+.Add-item:hover {
+  background-color: #525252;
+}
+/* .Add-item:active {
+  background-color: ;
+} */
+
+.modal-bg {
+  position: fixed;
+  inset: 0;
+  background-color: #00000054;
+}
+.modal {
+  background-color: white;
+  max-width: 75%;
+  margin: 5rem auto;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 2px 2px 5px #0000006c;
+}
+.modal h2 {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e7e7e7;
+}
+.modal p {
+  margin-bottom: 1rem;
+}
+.modal-flex {
+  display: flex;
+  justify-content: space-around;
+}
+
+.y-btn, .n-btn {
+  background-color: #666;
+  color: white;
+  border: 0;
+  padding: .4em .9em;
+  border-radius: 100vh;
+  cursor: pointer;
+}
+.y-btn {
+  background-color: #216a21;
 }
