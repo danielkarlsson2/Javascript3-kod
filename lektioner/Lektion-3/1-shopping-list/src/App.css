@@ -150,3 +150,21 @@ body {
 .y-btn {
   background-color: #216a21;
 }
+
+.error {
+  color: #9f3232;
+  font-size: .9rem;
+  text-align: center;
+}
+
+.Change-item input {
+  border: 0;
+  outline: 0;
+  font-size: 1rem;
+}
+.btn-check {
+  font-size: 1rem;
+}
+.btn-check:hover {
+  color: #216a21;
+}

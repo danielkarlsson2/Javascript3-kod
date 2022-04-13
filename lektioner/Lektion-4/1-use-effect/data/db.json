@@ -1,0 +1,24 @@
+{
+    "todos": [
+        {
+            "id": 1,
+            "title": "ta ut soporna",
+            "completed": false,
+            "user": 1
+        },
+        {
+            "id": 2,
+            "title": "städa kontoret",
+            "completed": false,
+            "user": 1
+        },
+        {
+            "id": 3,
+            "title": "middag med frugan",
+            "completed": false,
+            "user": 1
+        }
+    ]
+
+
+}
