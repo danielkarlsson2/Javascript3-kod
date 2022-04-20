@@ -2,12 +2,9 @@ import {useState} from 'react'
 import ProductRow from './ProductRow'
 
 const ShoppingList = ({products,}) => {
-
-
     
     return (
         <div className='d-flex justify-content-center'>
-
         
         <table className='table mt-3 w-50 '>
             <thead>
@@ -21,7 +18,6 @@ const ShoppingList = ({products,}) => {
            products && products.map(product =>  <ProductRow key={product.id} product={product} />)
 
         }
-
             {
                 !products.length && (
                 <tr>
