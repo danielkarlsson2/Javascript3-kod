@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+.navbar {
+  background-color: darkslategray;
+}
+.d-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;  
+}
+
+.navbar ul {
+  list-style: none;
+  width: 20%;
+}
+.navbar ul li a {
+  display: inline-block;
+  padding: 1rem;
+}
+.navbar ul li a:hover {
+  background-color: rgba(0, 0, 0, 0.505);
+}
+a.active {
+  text-decoration: underline;
+}
