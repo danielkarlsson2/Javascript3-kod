@@ -27,7 +27,7 @@ const BlogDetails = () => {
     <div>
         {loading && <p>loading...</p>}
         {post && (
-            <div className="blog-details">
+            <div className="blog-details posts post mt-2">
                 <h2 className='title'>{post.title}</h2>
                 <p>{post.body}</p>
 

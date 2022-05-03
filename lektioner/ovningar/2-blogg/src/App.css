@@ -35,7 +35,7 @@ body {
 }
 
 .container {
-  width: 70%;
+  width: 80%;
   margin: 0 auto;
 
 }
@@ -67,6 +67,7 @@ body {
 }
 .post {
   margin-bottom: 1rem;
+  cursor: pointer;
 }
 .title {
   list-style: none;
@@ -76,4 +77,30 @@ body {
   
   text-decoration: underline;
 
+}
+.mt-2 {
+  margin-top: 2rem;
+}
+.form-control {
+  display: block;
+  width: 100%;
+  font-size: 1.2rem;
+  
+}
+
+.input {
+  /* display: block; */
+  /* width: 100%; */
+  padding: .5rem;
+  border-radius: 8px;
+  border: 1px solid rgba(51, 51, 51, 0.365);
+}
+.create-post {
+  padding-top: 2rem;
+}
+#body {
+  resize: none;
+  height: 200px;
+  border-radius: 10px;
+  border: 1px solid rgba(51, 51, 51, 0.365);
 }

@@ -1,32 +1,36 @@
-
+import { useState, useContext } from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import Home from './views/Home'
 import Blogs from './views/Blogs';
 import About from './views/About'
 import BlogDetails from './views/BlogDetails';
 
+
+// const { id } = useParams()
+
 function App() {
   return (
-    
-    <BrowserRouter>
-        <Navbar />
+    <div className="app">
 
-        <div className="container">
-          <Routes >
-            <Route path='/' element={ <Home />} />
-            <Route path='/blogs' element={ <Blogs />} />
-            <Route path='/about' element={ <About />} />
-            <Route path='/blogs/:id' element={ <BlogDetails />} />
-
-
-
-          </Routes >
-        </div>
-    
-    
-    </BrowserRouter>
+       {/* <BrowserRouter> */}
+          <Navbar />
+  
+          <div className="container">
+            <Routes >
+              <Route path='/' element={ <Home addPost={addPost} />} />
+              <Route path='/blogs' element={ <Blogs />} />
+              <Route path='/about' element={ <About />} />
+              <Routes path='/blogs/:id' element={ <BlogDetails />} />
+  
+  
+            </Routes >
+          </div>
+      
+      
+      {/* </BrowserRouter> */}
+    </div>
 
   );
 }
