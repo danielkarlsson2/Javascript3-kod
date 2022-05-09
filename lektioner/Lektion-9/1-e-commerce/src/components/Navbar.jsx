@@ -1,10 +1,14 @@
 import React from 'react'
 import { Link, NavLink } from 'react-router-dom'
+import ShoppingCart from './shoppingCart/ShoppingCart'
+import { useSelector } from 'react-redux'
 
 const Navbar = () => {
+
+    const totalQuantity = useSelector(state => state.cartReducer.totalQuantity)
   return (
     // <!-- Navbar -->
-        <nav className="navbar navbar-expand-md navbar-light bg-info">
+        <nav className="navbar navbar-expand-md fixed-top navbar-light bg-info">
         {/* <!-- Container wrapper --> */}
         <div className="container-fluid">
             <Link to="/" className='navbar-brand'>ShopShop</Link>
@@ -58,13 +62,13 @@ const Navbar = () => {
                 aria-expanded="false"
                 >
                 <i className="fas fa-shopping-cart"></i>
-                <span className="badge rounded-pill badge-notification bg-danger">1</span>
+                {totalQuantity > 0 && <span className="badge rounded-pill badge-notification bg-danger">{totalQuantity}</span> }
                 </a>
                 <ul
-                className="dropdown-menu dropdown-menu-end"
+                className="dropdown-menu dropdown-menu-end shopping-cart"
                 aria-labelledby="navbarDropdownMenuLink"
                 >
-                    Shoppingcart
+                    <ShoppingCart />
                 </ul>
             </div>
             {/* <!-- Avatar --> */}

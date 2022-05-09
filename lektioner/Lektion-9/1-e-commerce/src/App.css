@@ -1,0 +1,16 @@
+.img-container {
+    width: 100%;
+    height: 300px
+}
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.shopping-cart {
+    min-width: 450px;
+
+}
+.cart-image {
+    width: 100px;
+}
